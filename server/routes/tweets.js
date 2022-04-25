@@ -23,6 +23,7 @@ module.exports = function(DataHelpers) {
       return;
     }
 
+    //if there's a user, call it otherwiser generate Random user
     const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
     const tweet = {
       user: user,

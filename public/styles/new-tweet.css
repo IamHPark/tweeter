@@ -1,0 +1,26 @@
+textarea {
+  width: 100%;
+  border-style: none;
+  border-bottom: 4px solid black;
+  background: transparent;
+  line-height: 1;
+}
+
+.new-tweet {
+  width: 80%;
+  margin: auto;
+  margin-top: 10vh;
+
+}
+.tweet-btn {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+  margin-top: 10px;
+}
+
+.btn {
+  background-color: #4056A1;
+  border: none;
+  padding: 5px 15px;
+}
