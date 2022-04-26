@@ -1,0 +1,52 @@
+.tweet {
+  width: 80%;
+  margin: 50px auto 50px auto;
+  padding: 20px;
+  border: solid rgb(110, 110, 110) 4px;
+}
+
+.shadow {
+  box-shadow: 10px 10px lightgrey;
+}
+
+.tweet header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweet footer {
+  border-top: solid rgb(110, 110, 110) 4px;;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  font-size: 0.8em;
+}
+
+.tweet p {
+  padding: 5px 15px;
+}
+
+.fa-solid {
+  padding-left: 10px;
+  color:rgb(110, 110, 110);
+}
+.user{
+  display: flex;
+  align-items: center;
+}
+
+.user img {
+  height: 70px;
+  width: 80px;
+}
+
+#username {
+  color: rgb(110,110,110);
+  padding: 15px;
+}
+
+#userid {
+  color: rgb(200,200,200);
+  padding: 15px;
+}

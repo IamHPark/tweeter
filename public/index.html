@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
     <!--external fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,6 +38,10 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+    ></script>
   </head>
 
   <body>
@@ -48,13 +53,12 @@
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-    <!-- <hr /> -->
-    <header>
+    <header class="header">
       <div>
         <img class="img" src="/images/profile-hex.png" alt="" />
       </div>
       <div>
-        <h2>Your Name</h2>
+        <h2>Heesoo Park</h2>
       </div>
     </header>
 
@@ -62,18 +66,41 @@
     <main class="container">
       <section class="new-tweet">
         <form action="../server/routes/tweets.js" method="POST">
-          <label for="tweet-text"></label>
-          <textarea
-            name="text"
-            id="tweet-text"
-            placeholder="What are you humming about?"
-          ></textarea>
+          <label for="tweet-text"
+            ><strong>What are you humming about?</strong></label
+          >
+          <textarea name="text" id="tweet-text"></textarea>
           <div class="tweet-btn">
             <button class="btn" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
+
+      <!--create tweets section as article, has header and footer and add icons -->
+      <article class="tweet">
+        <header>
+          <div class="user">
+            <img src="/images/face1.png" alt="" />
+            <span id="username">Heesoo</span>
+          </div>
+          <span id="userid">@hspark</span>
+        </header>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates
+          placeat, ipsa sint accusamus blanditiis maxime quas voluptate minus
+          quibusdam porro officiis neque est possimus non temporibus aspernatur
+          minima. Consequuntur, hic?
+        </p>
+        <footer>
+          <div>10 dyas ago</div>
+          <div>
+            <i class="icon fa-solid fa-flag"></i>
+            <i class="icon fa-solid fa-retweet"></i>
+            <i class="icon fa-solid fa-heart"></i>
+          </div>
+        </footer>
+      </article>
     </main>
   </body>
 </html>

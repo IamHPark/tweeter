@@ -9,6 +9,16 @@ $(document).ready(function(){
     } else {
       $(counter).css({'color' : 'black'})
     }
-  })
+  });
+
+  $('.tweet').hover(
+    function(){$(this).addClass('shadow')},
+    function(){$(this).removeClass('shadow')}
+  );
+
+  $('.icon').hover(
+    function(){$(this).css({'color' : 'orange'})},
+    function(){$(this).css({'color' : 'rgb(110,110,110)'})}
+  )
 });
 
