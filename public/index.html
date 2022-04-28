@@ -25,6 +25,7 @@
       rel="stylesheet"
     />
 
+    <!-- cdn library-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -32,6 +33,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+      integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -64,43 +71,24 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
-        <form action="../server/routes/tweets.js" method="POST">
+      <section class="new-tweet-container">
+        <form
+          action="../server/routes/tweets.js"
+          method="POST"
+          id="new-tweet-content"
+        >
           <label for="tweet-text"
             ><strong>What are you humming about?</strong></label
           >
           <textarea name="text" id="tweet-text"></textarea>
-          <div class="tweet-btn">
-            <button class="btn" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+          <div class="btn-counter">
+            <button id="tweet-btn" type="submit">Tweet</button>
+            <output name="counter" id="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
 
       <!--create tweets section as article, has header and footer and add icons -->
-      <article class="tweet">
-        <header>
-          <div class="user">
-            <img src="/images/woman.png" alt="" />
-            <span id="username">Heesoo</span>
-          </div>
-          <span id="userid">@hspark</span>
-        </header>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates
-          placeat, ipsa sint accusamus blanditiis maxime quas voluptate minus
-          quibusdam porro officiis neque est possimus non temporibus aspernatur
-          minima. Consequuntur, hic?
-        </p>
-        <footer>
-          <div>10 dyas ago</div>
-          <div>
-            <i class="icon fa-solid fa-flag"></i>
-            <i class="icon fa-solid fa-retweet"></i>
-            <i class="icon fa-solid fa-heart"></i>
-          </div>
-        </footer>
-      </article>
       <div id="tweets-container"></div>
     </main>
   </body>
