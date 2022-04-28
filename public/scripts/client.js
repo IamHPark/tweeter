@@ -88,7 +88,7 @@ $(() => {
     const data = $(this).serialize();
 
     if (words === "" || words === null || words.length > 140) {
-      alert("Please write proper tweet under 140 characters")
+      $('.warning').slideDown("slow");
       $('#tweet-text').val('');
       return $('#counter').text(0).css({'color' : 'rgb(110,110,110)'});
     }

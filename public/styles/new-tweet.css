@@ -7,26 +7,24 @@ textarea {
   margin-top: 10px;
 }
 
-.new-tweet {
+.new-tweet-container {
   width: 80%;
-  margin: auto;
-  margin-top: 10vh;
-
+  margin: 5vh auto;
 }
-.tweet-btn {
+.btn-counter {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', cursive;
   margin-top: 10px;
 }
 
-.btn {
+#tweet-btn {
   background-color: #4056A1;
   color: white;
   border: none;
   padding: 5px 15px;
 }
 
-.counter {
+#counter {
   color: rgb(110,110,110);
 }

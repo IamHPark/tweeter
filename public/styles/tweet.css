@@ -31,7 +31,7 @@
   padding-left: 10px;
   color:rgb(110, 110, 110);
 }
-.icon:hover {
+.icon:hover {/*  */
   color: orange;
 }
 
@@ -55,3 +55,24 @@
   padding: 15px;
 }
 
+.warning {
+  display: none;
+}
+
+.warning > div {
+  width: 70%;
+  color: white;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+.warning-icon {
+  color: white;
+  padding-right: 10px;
+}
