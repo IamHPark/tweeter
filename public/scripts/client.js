@@ -56,26 +56,26 @@ $(() => {
 
     const passedDays = timeago.format(data.created_at);
 
-    const $tweet =
-    `
-    <article class="tweet">
+    const $header = $(`
       <header>
         <div class="user">
           <img src=${data.user.avatars} alt="" />
           <span id="username">${data.user.name}</span>
         </div>
-      </header>
-      <p>${data.content.text}</p>
+       </header>`);
+    const $footer = $(`
       <footer>
         <div>${passedDays}</div>
         <div>
-        <i class="icon fa-solid fa-flag"></i>
-        <i class="icon fa-solid fa-retweet"></i>
-        <i class="icon fa-solid fa-heart"></i>
-      </div>
+          <i class="icon fa-solid fa-flag"></i>
+          <i class="icon fa-solid fa-retweet"></i>
+          <i class="icon fa-solid fa-heart"></i>
+        </div>
       </footer>
-    </article>
-    `;
+    `);
+    const $content = $('<div>').text(data.content.text);
+    const $tweet = $('<article>').addClass('tweet');
+    $tweet.append($header, $content, $footer);
 
     return $tweet;
   };
