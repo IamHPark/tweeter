@@ -11,10 +11,5 @@ $(document).ready(function(){
       $counter.css({'color' : 'rgb(110,110,110)'})
     }
   });
-
-  $('.tweet').hover(
-    function(){$(this).addClass('shadow')},
-    function(){$(this).removeClass('shadow')}
-  );
 });
 
