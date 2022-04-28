@@ -29,12 +29,20 @@ main {
   margin: 5vh auto;
 }
 
+.top {
+  display: none;
+  color: red;
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  margin: 10px;
+}
+
 @media screen and (min-width: 1024px) {
   .body-position {
     display: flex;
     justify-content: center;
   }
-
 }
 
 /*
