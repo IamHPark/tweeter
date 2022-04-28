@@ -26,7 +26,15 @@ body {
 
 main {
   width: 90%;
-  margin: auto;
+  margin: 5vh auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .body-position {
+    display: flex;
+    justify-content: center;
+  }
+
 }
 
 /*

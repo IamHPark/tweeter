@@ -60,43 +60,47 @@
         <i class="down-arrow fa-solid fa-angles-down"></i>
       </div>
     </nav>
-    <header class="header">
-      <div>
-        <img class="img" src="/images/profile-hex.png" alt="" />
-      </div>
-      <div>
-        <h2>Heesoo Park</h2>
-      </div>
-    </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet-container">
-        <div class="warning">
-          <div>
-            <i class="fa-solid fa-circle-exclamation warning-icon"></i>
-            <p>Empty or Too long! Tweet should be between 1 to 140 letters.</p>
-          </div>
+    <div class="body-position">
+      <header class="header">
+        <div>
+          <img class="img" src="/images/profile-hex.png" alt="" />
         </div>
+        <div>
+          <h2>Heesoo Park</h2>
+        </div>
+      </header>
 
-        <form
-          action="../server/routes/tweets.js"
-          method="POST"
-          id="new-tweet-content"
-        >
-          <label for="tweet-text"
-            ><strong>What are you humming about?</strong></label
-          >
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="btn-counter">
-            <button id="tweet-btn" type="submit">Tweet</button>
-            <output name="counter" id="counter" for="tweet-text">140</output>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet-container">
+          <div class="warning">
+            <div>
+              <i class="fa-solid fa-circle-exclamation warning-icon"></i>
+              <p>
+                Empty or Too long! Tweet should be between 1 to 140 letters.
+              </p>
+            </div>
           </div>
-        </form>
-      </section>
 
-      <!--create tweets section as article, has header and footer and add icons -->
-      <div id="tweets-container"></div>
-    </main>
+          <form
+            action="../server/routes/tweets.js"
+            method="POST"
+            id="new-tweet-content"
+          >
+            <label for="tweet-text"
+              ><strong>What are you humming about?</strong></label
+            >
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="btn-counter">
+              <button id="tweet-btn" type="submit">Tweet</button>
+              <output name="counter" id="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+
+        <!--create tweets section as article, has header and footer and add icons -->
+        <div id="tweets-container"></div>
+      </main>
+    </div>
   </body>
 </html>

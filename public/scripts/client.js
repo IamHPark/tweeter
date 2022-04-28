@@ -95,10 +95,13 @@ $(() => {
     // check textarea input length
     const words = $("#tweet-text").val();
     if (words === "" || words === null || words.length > 140) {
-      $('.warning').slideDown("slow");
-      $('#tweet-text').val('');
-      return $('#counter').text(0).css({'color' : 'rgb(110,110,110)'});
+      return $('.warning').slideDown("slow");
+      // return $('#counter').css({'color' : 'rgb(110,110,110)'});
     }
+
+    // $('#tweet-text').click(() => {
+    //   $('.warning').slideUp();
+    // })
 
     $.ajax({
       url: '/tweets',
@@ -106,6 +109,7 @@ $(() => {
       data: data
     }).then((data) => {
       loadTweets();
+      $('.warning').slideUp();
       $('#tweet-text').val('');
       return $('#counter').text(0).css({'color' : 'rgb(110,110,110)'});
     })
