@@ -57,7 +57,7 @@
       <span class="logo">tweeter</span>
       <div class="write">
         <span>Write a new tweet</span>
-        <i class="fa-solid fa-angles-down"></i>
+        <i class="down-arrow fa-solid fa-angles-down"></i>
       </div>
     </nav>
     <header class="header">
@@ -69,16 +69,16 @@
       </div>
     </header>
 
-    <div class="warning">
-      <div>
-        <i class="fa-solid fa-circle-exclamation warning-icon"></i>
-        <p>Empty or Too long! Tweet should be between 1 to 140 letters.</p>
-      </div>
-    </div>
-
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet-container">
+        <div class="warning">
+          <div>
+            <i class="fa-solid fa-circle-exclamation warning-icon"></i>
+            <p>Empty or Too long! Tweet should be between 1 to 140 letters.</p>
+          </div>
+        </div>
+
         <form
           action="../server/routes/tweets.js"
           method="POST"

@@ -73,20 +73,27 @@ $(() => {
         </div>
       </footer>
     `);
-    const $content = $('<div>').text(data.content.text);
+    const $content = $('<div class="content">').text(data.content.text);
     const $tweet = $('<article>').addClass('tweet');
     $tweet.append($header, $content, $footer);
 
     return $tweet;
   };
 
+  // when press the "write new tweet", toggle textarea
+  $('.write').click(() => {
+    $('.new-tweet-container').slideToggle(100);
+  })
+
+  // press tweet button for Posting
   $('#new-tweet-content').on('submit', function(event) {
     event.preventDefault();
     console.log('Form submitted!')
 
-    const words = $("#tweet-text").val();
     const data = $(this).serialize();
 
+    // check textarea input length
+    const words = $("#tweet-text").val();
     if (words === "" || words === null || words.length > 140) {
       $('.warning').slideDown("slow");
       $('#tweet-text').val('');

@@ -28,3 +28,25 @@ textarea {
 #counter {
   color: rgb(110,110,110);
 }
+
+
+.warning {
+  display: none;
+}
+
+.warning > div {
+  width: 100%;
+  color: white;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+.warning-icon {
+  color: white;
+  padding-right: 10px;
+}
