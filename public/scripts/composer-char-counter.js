@@ -2,7 +2,7 @@ $(document).ready(function(){
   $("#tweet-text").on('input', function() {
     let wordLength = $(this).val().length;
     let countLength = 140 - wordLength;
-    const $counter = $(this).siblings().children(".counter");
+    const $counter = $(this).siblings().children("#counter");
 
     $counter.text(countLength);
     if (countLength < 0) {
