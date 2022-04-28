@@ -5,7 +5,7 @@
   border: solid rgb(110, 110, 110) 4px;
 }
 
-.shadow {
+.tweet:hover {
   box-shadow: 10px 10px lightgrey;
 }
 
@@ -30,6 +30,7 @@
 .icon {
   padding-left: 10px;
   color:rgb(110, 110, 110);
+  cursor: pointer;
 }
 .icon:hover {
   color: orange;
