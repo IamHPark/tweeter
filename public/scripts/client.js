@@ -4,56 +4,9 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// const { format } = require("express/lib/response");
-
-
 $(() => {
-  // const data = [
-  //   {
-  //     "user": {
-  //       "name": "Newton",
-  //       "avatars": "https://i.imgur.com/73hZDYK.png"
-  //       ,
-  //       "handle": "@SirIsaac"
-  //     },
-  //     "content": {
-  //       "text": "If I have seen further it is by standing on the shoulders of giants"
-  //     },
-  //     "created_at": 1461116232227
-  //   },
-  //   {
-  //     "user": {
-  //       "name": "Descartes",
-  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
-  //       "handle": "@rd" },
-  //     "content": {
-  //       "text": "Je pense , donc je suis"
-  //     },
-  //     "created_at": 1461113959088
-  //   }
-  // ]
-
-  const renderTweets = (tweets) => {
-    for (const tweet of tweets) {
-      const $tweet = createTweetElement(tweet);
-      $('#tweets-container').prepend($tweet);
-    }
-  }
-
-  const loadTweets = () => {
-    $.ajax({
-      url: '/tweets',
-      method: 'GET'
-    }).then((tweets) => {
-      $('#tweets-container').empty();
-      renderTweets(tweets);
-    })
-  }
-
-
 
   const createTweetElement = (data) => {
-
     const passedDays = timeago.format(data.created_at);
 
     const $header = $(`
@@ -80,15 +33,42 @@ $(() => {
     return $tweet;
   };
 
+  const renderTweets = (tweets) => {
+    for (const tweet of tweets) {
+      const $tweet = createTweetElement(tweet);
+      $('#tweets-container').prepend($tweet);
+    }
+  }
+
+  // when get request occur, create tweet and prepend it to container and show them
+  const loadTweets = () => {
+    $.ajax({
+      url: '/tweets',
+      method: 'GET'
+    }).then((tweets) => {
+      $('#tweets-container').empty();
+      renderTweets(tweets);
+    })
+  }
+
   // when press the "write new tweet", toggle textarea
   $('.write').click(() => {
     $('.new-tweet-container').slideToggle(100);
   })
 
+  //when scroll down, show up arrow
+  $(this).scroll(() => {
+    const $scroll = $(this).scrollTop();
+    if ($scroll > 100) {
+      $('.top').fadeIn()
+    } else {
+      $('.top').fadeOut();
+    }
+  });
+
   // press tweet button for Posting
   $('#new-tweet-content').on('submit', function(event) {
     event.preventDefault();
-    console.log('Form submitted!')
 
     const data = $(this).serialize();
 
@@ -99,10 +79,6 @@ $(() => {
       // return $('#counter').css({'color' : 'rgb(110,110,110)'});
     }
 
-    // $('#tweet-text').click(() => {
-    //   $('.warning').slideUp();
-    // })
-
     $.ajax({
       url: '/tweets',
       method: 'POST',
@@ -111,7 +87,7 @@ $(() => {
       loadTweets();
       $('.warning').slideUp();
       $('#tweet-text').val('');
-      return $('#counter').text(0).css({'color' : 'rgb(110,110,110)'});
+      return $('#counter').text(140).css({'color' : 'rgb(110,110,110)'});
     })
   })
 
