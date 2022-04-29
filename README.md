@@ -23,3 +23,8 @@ Tweeter is a simple, single-page Twitter clone that uses Ajax, jQuery, HTML5 and
 - Express
 - Node 5.10.x or above
 - body-parser
+
+## Screenshots
+
+!["Screenshots of tweet mobile/tablet version"](https://github.com/IamHPark/tweeter/blob/master/docs/tweeter-mobile.png)
+!["Screenshots of tweet PC version"](https://github.com/IamHPark/tweeter/blob/master/docs/tweeter-pc.png)
