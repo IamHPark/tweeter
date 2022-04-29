@@ -56,16 +56,6 @@ $(() => {
     $('.new-tweet-container').slideToggle(100);
   })
 
-  //when scroll down, show up arrow
-  $(this).scroll(() => {
-    const $scroll = $(this).scrollTop();
-    if ($scroll > 100) {
-      $('.top').fadeIn()
-    } else {
-      $('.top').fadeOut();
-    }
-  });
-
   // press tweet button for Posting
   $('#new-tweet-content').on('submit', function(event) {
     event.preventDefault();

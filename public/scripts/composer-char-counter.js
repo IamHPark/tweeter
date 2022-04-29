@@ -11,5 +11,17 @@ $(document).ready(function(){
       $counter.css({'color' : 'rgb(110,110,110)'})
     }
   });
+
+    //when scroll down, show up arrow
+    $(this).scroll(() => {
+      const $scroll = $(this).scrollTop();
+      if ($scroll > 100) {
+        $('.top').fadeIn()
+      } else {
+        $('.top').fadeOut();
+      }
+    });
+
+
 });
 
