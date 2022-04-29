@@ -16,7 +16,7 @@
 }
 
 .tweet footer {
-  border-top: solid rgb(110, 110, 110) 4px;;
+  border-top: solid rgb(110, 110, 110) 4px;
   display: flex;
   justify-content: space-between;
   padding: 15px;
@@ -25,18 +25,20 @@
 
 .content {
   margin: 15px;
+  overflow-wrap: normal;
 }
 
 .icon {
   padding-left: 10px;
-  color:rgb(110, 110, 110);
+  color: rgb(110, 110, 110);
   cursor: pointer;
 }
+
 .icon:hover {
   color: orange;
 }
 
-.user{
+.user {
   display: flex;
   align-items: center;
 }
@@ -47,11 +49,11 @@
 }
 
 #username {
-  color: rgb(110,110,110);
+  color: rgb(110, 110, 110);
   padding: 15px;
 }
 
 #userid {
-  color: rgb(200,200,200);
+  color: rgb(200, 200, 200);
   padding: 15px;
 }
